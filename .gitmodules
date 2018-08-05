@@ -1,6 +1,0 @@
-[submodule "site/web/app/themes/Beans"]
-	path = site/web/app/themes/Beans
-	url = git@github.com:Getbeans/Beans.git
-[submodule "site/web/app/themes/jcos.io-beans-child-theme"]
-	path = site/web/app/themes/jcos.io-beans-child-theme
-	url = git@github.com:sudoist/jcos.io-beans-child-theme.git
