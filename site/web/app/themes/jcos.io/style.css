@@ -4,7 +4,7 @@ Description: Personal site Child Theme for the Beans Theme.
 Author: John Cosio
 Author URI: https://jcos.io
 Template: tm-beans
-Version: 2.1.0
+Version: 2.3.0
 Text Domain: tm-beans
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,6 +17,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 /* general */
+@font-face {
+    font-family: Icomoon;
+    font-weight: normal;
+    src: url(../jcos.io/fonts/icomoon-backloggery/fonts/icomoon.ttf);
+}
+
 html {
     color: #ccc;
     font: 16px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -134,7 +140,7 @@ h6 {
  * body = .page-id-325 .post-325
  */
  html.home {
-    background-image: url("https://jcos.io/meta/wp-content/uploads/2018/02/skatepark_home_1.jpg");
+    background-image: url("../jcos.io/images/background_skatepark_home_1.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -158,10 +164,10 @@ body.custom-background.page-id-325 {
     transition: all 0.5s ease 0s;
 }
 
-.page-id-325 .uk-icon-backloggery:before {    
-    font-family: Arial;
+.page-id-325 .uk-icon-backloggery:before {
+    font-family: Icomoon;
     font-size: x-large;
-    content: 'B';
+    content: '\e900';
 }
 
 .page-id-325 ul.uk-breadcrumb {
