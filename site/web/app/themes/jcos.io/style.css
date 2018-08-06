@@ -1,0 +1,414 @@
+/*
+Theme Name: jcos.io
+Description: Personal site Child Theme for the Beans Theme.
+Author: John Cosio
+Author URI: https://jcos.io
+Template: tm-beans
+Version: 2.3.0
+Text Domain: tm-beans
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*
+ * Background pattern from Subtle Patterns
+ * https://www.toptal.com/designers/subtlepatterns/black-paper/
+ * Thanks Atle Mo(http://atle.co/)
+ */
+
+/* general */
+@font-face {
+    font-family: Icomoon;
+    font-weight: normal;
+    src: url(../jcos.io/fonts/icomoon-backloggery/fonts/icomoon.ttf);
+}
+
+html {
+    color: #ccc;
+    font: 16px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+a,
+.uk-link {
+    color: #f2f2f2;
+    text-decoration: underline;
+    transition: all 0.5s ease 0s;
+}
+
+a:hover,
+.uk-link:hover {
+    color: #b99128;
+    text-decoration: underline;
+    transition: all 0.5s ease 0s;
+}
+
+.page-id-171 a:hover,
+.page-id-171 .uk-link:hover {
+    color: #b99128 !important;
+    transition: all 0.5s ease 0s;
+}
+
+.uk-button-primary {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+
+.uk-button-primary:hover,
+.uk-button-primary:focus {
+    background-color: #b99128;
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+
+/* header */
+.tm-header {
+    border-bottom: 0 none;
+    padding-bottom: 0px;
+}
+
+.tm-site-branding,
+.tm-site-branding a {
+    color: #fff;
+    font-size: 34px;
+    text-shadow: 1px 1px 1px #b99128;
+}
+
+.tm-site-branding.uk-float-left > a:hover {
+    text-decoration: none;
+}
+
+.uk-text-small {
+    color: #fff !important;
+    font-size: 14px;
+}
+
+/* navigation */
+.uk-navbar-nav > li.uk-active > a {
+    color: #fff;
+    border-bottom: 2px solid #b99128;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+
+.uk-subnav > .uk-active > * {
+    color: #b99128 !important;
+    text-decoration: underline !important;
+}
+
+.uk-navbar-nav > li > a {
+    color: #ccc;
+    font-size: 18px;
+    transition: all 0.5s ease 0s;
+}
+
+.uk-navbar-nav > li:hover > a,
+.uk-navbar-nav > li > a:focus,
+.uk-navbar-nav > li.uk-open > a {
+    color: #fff;
+    border-bottom: 2px solid #b99128;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    transition: all 0.2s ease 0s;
+}
+
+/* body */
+.tm-main {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #ccc;
+}
+
+.uk-article-title {
+    color: #fff;
+}
+
+.uk-panel-box {
+    background: rgba(32, 32, 32, 0.7);
+    color: #ccc;
+    border-radius: 25px;
+}
+
+/* home - Landing page
+ * Landing page classes
+ * home = .home
+ * body = .page-id-325 .post-325
+ */
+ html.home {
+    background-image: url("../jcos.io/images/background_skatepark_home_1.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.custom-background.page-id-325 {
+    background: none;
+}
+
+.page-id-325 .uk-icon-button {
+    background: #000;
+    color: #eee;
+    transition: all 0.5s ease 0s;
+}
+
+.page-id-325 .uk-icon-button:hover,
+.page-id-325 .uk-icon-button:focus {
+    background-color: #b99128;
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+
+.page-id-325 .uk-icon-backloggery:before {
+    font-family: Icomoon;
+    font-size: x-large;
+    content: '\e900';
+}
+
+.page-id-325 ul.uk-breadcrumb {
+    display: none;
+}
+
+.page-id-325 .fab {
+    line-height: 2;
+}
+
+.post-325 header {
+    display: none;
+}
+
+.uk-panel-box.post-325 {
+    background: none;
+}
+
+ul.uk-subnav.home-icons {
+    float: right;
+}
+
+/* blog page */
+.uk-subnav > * > * {
+    color: #fff !important;
+    display: inline-block;
+}
+
+.uk-article-meta {
+    color: #999
+}
+
+.uk-article-meta a {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+.uk-article-meta a:hover {
+    color: #b99128 !important;
+    text-decoration: underline;
+}
+
+.tm-article-image {
+    text-align: center;
+}
+
+/* inline spoiler */
+div.spoiler-wrap {
+    background: none;
+}
+
+div.spoiler-head {
+    color: #fff;
+}
+
+div.spoiler-body {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+
+/* pagination */
+.uk-pagination > .uk-active > span {
+    background: #b99128 none repeat scroll 0 0;
+    color: #fff;
+    transition: all 0.5s ease 0s
+}
+
+.uk-pagination > li > a {
+    background: #000 none repeat scroll 0 0;
+    color: #fff;
+    transition: all 0.5s ease 0s
+}
+
+.uk-pagination > li > a:hover,
+.uk-pagination > li > a:focus {
+    background-color: #b99128;
+    color: #fff;
+    outline: medium none;
+    transition: all 0.5s ease 0s;
+}
+
+.category-work .wpInsert.wpInsertInPostAd.wpInsertBelow {
+    display: none;
+}
+
+.category-work + ul.uk-pagination {
+    display: none;
+}
+
+/* sidebar */
+.uk-panel-title {
+    color: #fff;
+}
+
+.tm-widget a,
+.tm-widget.uk-link {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.tm-widget a:hover,
+.tm-widget.uk-link:hover {
+    color: #b99128;
+    text-decoration: none;
+}
+
+/* footer */
+.tm-footer {
+    border-top: 0 none;
+    padding-top: 0px;
+}
+
+footer.tm-footer .uk-align-medium-left ul {
+    padding: 0;
+}
+
+/* footer menu */
+footer .menu li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer .menu li a {
+    text-decoration: none;
+}
+
+/* contact form 7 */
+.wpcf7-form ul, .wpcf7-form ol {
+    padding-left: 0;
+}
+
+.wpcf7-textarea {
+    width: 99% !important;
+}
+
+.wpcf7-form .singleline ol {
+    list-style: none;
+    margin: 0;
+}
+
+.wpcf7-form .singleline li {
+    display: inline-block;
+    width: 100%;
+}
+
+.wpcf7-form .singleline input {
+    width: 100%;
+}
+
+.wpcf7-form .singleline li {
+    display: block;
+    float: left;
+}
+
+.wpcf7-form .singleline.full-width textarea {
+    float: left;
+    height: 5em;
+    margin-top: 0.7em;
+    width: 100%;
+}
+
+.wpcf7-form .singleline.full-width li {
+    width: 100%;
+    margin-top: 0;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+    background: #000 none repeat scroll 0 0;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.wpcf7-form-control.wpcf7-submit:hover {
+    background-color: #b99128;
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+
+/* mobile */
+@media only screen and (min-width: 800px) {
+
+    /* contact form 7 */
+        .wpcf7-form .singleline input {
+        width: 70% !important;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .wpcf7-textarea {
+        width: 70% !important;
+        display: block;
+        margin: 0 auto !important;
+    }
+
+}
+
+@media only screen and (max-width: 840px) {
+
+    ul.uk-subnav.home-icons {
+        float: none;
+        margin: 0 auto;
+        display: table;
+    }
+
+    footer.tm-footer .uk-align-medium-left,
+    footer.tm-footer .uk-margin-bottom-remove {
+        text-align: center;
+        float: none;
+    }
+
+    footer.tm-footer .menu li {
+        margin: 10px;
+    }
+
+    ul#menu-footer {
+        padding: 0;
+    }
+
+    .tm-widget.uk-panel {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 760px) {
+
+    /* about me page */
+    .uk-width-medium-1-2:nth-child(2) {
+        margin-top: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 430px) {
+
+    footer.tm-footer .menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+}
