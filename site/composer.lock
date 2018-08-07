@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "718ce52178ac33df2abbfdfb174d2b74",
+    "content-hash": "4899e947b5d0a1223dbba53914a4bc39",
     "packages": [
         {
             "name": "composer/installers",
@@ -402,6 +402,111 @@
                 "environment"
             ],
             "time": "2018-07-29T20:33:41+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/akismet",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/akismet/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.zip?timestamp=1530169508",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/akismet/",
+            "time": "2018-06-28T07:05:08+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/autodescription",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/autodescription/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/autodescription.zip?timestamp=1525625897",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/autodescription/",
+            "time": "2018-05-06T16:58:17+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/inline-spoilers",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/inline-spoilers/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/inline-spoilers.zip?timestamp=1513888216",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/inline-spoilers/",
+            "time": "2017-12-21T20:30:16+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/simple-share-buttons-adder",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/simple-share-buttons-adder/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/simple-share-buttons-adder.zip?timestamp=1525157835",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/simple-share-buttons-adder/",
+            "time": "2018-05-01T06:57:15+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/wordfence",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordfence/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordfence.zip?timestamp=1533059265",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordfence/",
+            "time": "2018-07-31T17:47:45+00:00"
         }
     ],
     "packages-dev": [
@@ -459,7 +564,13 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "wpackagist-plugin/akismet": 20,
+        "wpackagist-plugin/inline-spoilers": 20,
+        "wpackagist-plugin/simple-share-buttons-adder": 20,
+        "wpackagist-plugin/wordfence": 20,
+        "wpackagist-plugin/autodescription": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
