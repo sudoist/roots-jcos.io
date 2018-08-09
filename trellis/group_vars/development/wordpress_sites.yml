@@ -11,7 +11,8 @@ wordpress_sites:
     multisite:
       enabled: false
     ssl:
-      enabled: false
+      enabled: true
+      hsts_max_age: 0
       provider: self-signed
     cache:
       enabled: false
