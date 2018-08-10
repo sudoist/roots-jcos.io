@@ -1,6 +1,6 @@
 # Documentation: https://roots.io/trellis/docs/mail/
-mail_smtp_server: smtp.zoho.com:465
+mail_smtp_server: smtp.mailgun.org
 mail_admin: hello@jcos.io
-mail_hostname: smtp.zoho.com
-mail_user: hello@jcos.io
+mail_hostname: smtp.mailgun.org
+mail_user: postmaster@mg.jcos.io
 mail_password: "{{ vault_mail_password }}" # Define this variable in group_vars/all/vault.yml
