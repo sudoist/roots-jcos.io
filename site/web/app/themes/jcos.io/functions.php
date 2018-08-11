@@ -127,6 +127,17 @@ function exclude_cat_from_previous_next_WHERE( $where = null, $in_same_cat = fal
     }
 }
 
+// Remove Query String from Static Resources
+// https://wpbeansframework.com/2016/11/30/speedy-theme/
+add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
+add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
+
+function remove_cssjs_ver( $src ) {
+    if( strpos( $src, '?ver=' ) )
+        $src = remove_query_arg( 'ver', $src );
+        return $src;
+}
+
 // Add Google Analytics code
 add_action('wp_footer', 'add_googleanalytics');
 function add_googleanalytics() { ?>
