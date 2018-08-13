@@ -41,7 +41,6 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/akismet": "dev-trunk",
     "wpackagist-plugin/inline-spoilers": "dev-trunk",
-    "wpackagist-plugin/simple-share-buttons-adder": "dev-trunk",
     "wpackagist-plugin/wordfence": "dev-trunk",
     "wpackagist-plugin/autodescription": "dev-trunk"
   },
