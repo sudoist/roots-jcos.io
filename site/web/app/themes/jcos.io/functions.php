@@ -25,6 +25,11 @@ function beans_child_enqueue_assets() {
     );
 }
 
+// Remove primary menu and permanently enable offcanvas.
+beans_remove_action( 'beans_primary_menu' );
+beans_modify_action_hook( 'beans_primary_menu_offcanvas_button', 'beans_header' );
+beans_replace_attribute( 'beans_primary_menu_offcanvas_button', 'class', 'uk-hidden-large', 'uk-float-right' );
+
 // Add class to home html tag
 add_filter('language_attributes', 'add_home_html_class');
 
