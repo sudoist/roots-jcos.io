@@ -4,7 +4,7 @@ Description: Personal site Child Theme for the Beans Theme.
 Author: John Cosio
 Author URI: https://jcos.io
 Template: tm-beans
-Version: 3.0.0
+Version: 3.0.1
 Text Domain: tm-beans
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -95,7 +95,7 @@ div.tm-site-branding.uk-float-left a:hover ~ span.tm-site-title-tag.uk-text-smal
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 85% }
+  to { width: 80% }
 }
 
 /* The typewriter cursor effect */
