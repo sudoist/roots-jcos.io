@@ -144,7 +144,7 @@ function remove_cssjs_ver( $src ) {
 }
 
 // Add Google Adsense code
-add_action('wp_header', 'add_googleAdsense');
+add_action('wp_head', 'add_googleAdsense');
 function add_googleAdsense() { ?>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
