@@ -4,7 +4,7 @@ Description: Personal site Child Theme for the Beans Theme.
 Author: John Cosio
 Author URI: https://jcos.io
 Template: tm-beans
-Version: 3.1.0
+Version: 3.2.0
 Text Domain: tm-beans
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -188,7 +188,7 @@ h6 {
  * home = .home
  * body = .page-id-325 .post-325
  */
- html.home {
+ html.home .page-id-325 {
     background-image: url("../jcos.io/images/background_skatepark_home_1.jpg");
     background-position: center center;
     background-size: cover;
