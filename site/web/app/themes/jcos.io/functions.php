@@ -143,8 +143,8 @@ function remove_cssjs_ver( $src ) {
         return $src;
 }
 
-// Add Google Analytics code
-add_action('wp_footer', 'add_googleanalytics');
+// Add Google Adsense code
+add_action('wp_header', 'add_googleAdsense');
 function add_googleAdsense() { ?>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
@@ -156,7 +156,7 @@ function add_googleAdsense() { ?>
 <?php }
 
 // Add Google Analytics code
-add_action('wp_footer', 'add_googleanalytics');
+add_action('wp_footer', 'add_googleAnalytics');
 function add_googleAnalytics() { ?>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
