@@ -34,7 +34,7 @@ beans_replace_attribute( 'beans_primary_menu_offcanvas_button', 'class', 'uk-hid
 add_filter('language_attributes', 'add_home_html_class');
 
 function add_home_html_class( $output ) {
-    if (is_page('home') || is_front_page() || is_home()) {
+    if ( is_front_page() ) {
         return $output . ' class="home"';
     }
 }
@@ -138,7 +138,7 @@ add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
 add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
 
 function remove_cssjs_ver( $src ) {
-    if( strpos( $src, '?ver=' ) )
+    if ( strpos( $src, '?ver=' ) )
         $src = remove_query_arg( 'ver', $src );
         return $src;
 }
