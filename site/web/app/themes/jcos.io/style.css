@@ -4,7 +4,7 @@ Description: Personal site Child Theme for the Beans Theme.
 Author: John Cosio
 Author URI: https://jcos.io
 Template: tm-beans
-Version: 3.5.0
+Version: 3.6.0
 Text Domain: tm-beans
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -131,6 +131,14 @@ header a.uk-button.uk-float-right {
 
 header a.uk-button.uk-float-right:hover {
     background: #b99128;
+}
+
+.uk-offcanvas .uk-panel-title {
+    text-decoration: underline;
+}
+
+.uk-offcanvas .uk-panel a:not([class]):hover {
+    color: #b99128;
 }
 
 .uk-navbar-nav > li.uk-active > a {
@@ -398,6 +406,20 @@ footer .menu li a {
     transition: all 0.5s ease 0s;
 }
 
+/* Social sharing buttons */
+.share-icons .uk-icon-button {
+    background: #000;
+    color: #eee;
+    transition: all 0.5s ease 0s;
+}
+
+.share-icons .uk-icon-button:hover,
+.share-icons .uk-icon-button:focus {
+    background-color: #b99128;
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+
 /* mobile */
 @media only screen and (min-width: 800px) {
 
@@ -472,6 +494,16 @@ footer .menu li a {
     footer.tm-footer .menu li {
         display: block;
         margin: 10px 0;
+    }
+
+    /* Social sharing buttons */
+    .share-icons li {
+        margin: 0 auto;
+    }
+
+    .share-icons h2 {
+        width: 100%;
+        text-align: center;
     }
 
 }

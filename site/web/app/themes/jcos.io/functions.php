@@ -143,6 +143,71 @@ function remove_cssjs_ver( $src ) {
         return $src;
 }
 
+// Add Social share buttons
+// http://crunchify.me/2aAAlvK
+add_filter( 'the_content', 'crunchify_social_sharing_buttons');
+
+function crunchify_social_sharing_buttons( $content ) {
+    global $post;
+    if ( is_singular() && !is_home() && !is_front_page() ) {
+
+        // Get current page URL 
+        $crunchifyURL = urlencode(get_permalink());
+
+        // Get current page title
+        $decodeTitle = html_entity_decode( get_the_title(), ENT_COMPAT, 'UTF-8' );
+        $crunchifyTitle = htmlspecialchars( urlencode( $decodeTitle ), ENT_COMPAT, 'UTF-8' );
+        $crunchifyEmailTitle = str_replace( '+', '%20', $crunchifyTitle );
+
+        // Get Post Thumbnail for pinterest
+        $crunchifyThumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+
+        // Social media base URL
+        $twitter = 'https://twitter.com/intent/tweet?text=';
+        $facebook = 'https://www.facebook.com/sharer/sharer.php?u=';
+        $google = 'https://plus.google.com/share?url=';
+        $linkedIn = 'https://www.linkedin.com/shareArticle?mini=true&url=';
+        $pinterest = 'https://pinterest.com/pin/create/button/?url=' . $crunchifyURL;
+
+        // Email body
+        $emailBody = 'Greetings! Check this out ' . $crunchifyURL;
+
+        // Social icons
+        $twitterIcon = '<i class="uk-icon-button uk-icon-twitter"></i>';
+        $facebookIcon = '<i class="uk-icon-button uk-icon-facebook"></i>';
+        $googleIcon = '<i class="uk-icon-button uk-icon-google-plus"></i>';
+        $linkedInIcon = '<i class="uk-icon-button uk-icon-linkedin"></i>';
+        $pinterestIcon = '<i class="uk-icon-button uk-icon-pinterest"></i>';
+        $emailIcon = '<i class="uk-icon-button uk-icon-envelope"></i>';
+
+        // Construct sharing URL without using any script
+        $twitterURL = $twitter . $crunchifyTitle .'&amp;url='. $crunchifyURL .'&amp;via=sudoist';
+        $facebookURL = $facebook . $crunchifyURL;
+        $googleURL = $google . $crunchifyURL;
+        $linkedInURL = $linkedIn . $crunchifyURL .'&amp;title='. $crunchifyTitle;
+        $emailURL = 'mailto:?subject=' . $crunchifyEmailTitle .'&body=' . $emailBody;
+
+        // Based on popular demand added Pinterest too
+        $pinterestURL = $pinterest . '&amp;media=' . $crunchifyThumbnail[0] . '&amp;description=' . $crunchifyTitle;
+
+        // Add sharing button at the end of page/page content
+        $content .= '<ul class="uk-subnav share-icons uk-margin-top">';
+        $content .= '<h2>Care to share?</h2>';
+        $content .= '<li><a href="'. $twitterURL .'" target="_blank">' . $twitterIcon . '</a></li>';
+        $content .= '<li><a href="'. $facebookURL.'" target="_blank">' . $facebookIcon . '</a></li>';
+        $content .= '<li><a href="'. $googleURL.'" target="_blank">' . $googleIcon . '</a></li>';
+        $content .= '<li><a href="'. $linkedInURL.'" target="_blank">' . $linkedInIcon . '</a></li>';
+        $content .= '<li><a href="'. $pinterestURL.'" data-pin-custom="true" target="_blank">' . $pinterestIcon . '</a></li>';
+        $content .= '<li><a href="'. $emailURL .'" data-pin-custom="true" target="_blank">' . $emailIcon . '</a></li>';
+        $content .= '</ul>';
+
+        return $content;
+    } else {
+        // if not a post/page then don't include sharing button
+        return $content;
+    }
+};
+
 // Add Google Adsense code
 add_action('wp_head', 'add_googleAdsense');
 function add_googleAdsense() { ?>
