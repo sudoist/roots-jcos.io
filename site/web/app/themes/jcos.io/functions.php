@@ -157,7 +157,7 @@ function crunchify_social_sharing_buttons( $content ) {
         // Get current page title
         $decodeTitle = html_entity_decode( get_the_title(), ENT_COMPAT, 'UTF-8' );
         $crunchifyTitle = htmlspecialchars( urlencode( $decodeTitle ), ENT_COMPAT, 'UTF-8' );
-        $crunchifyEmailTitle = str_replace( '+', '%20', $crunchifyTitle );
+        $crunchifyEmailTitle = 'JCOS.IO : ' . str_replace( '+', '%20', $crunchifyTitle );
 
         // Get Post Thumbnail for pinterest
         $crunchifyThumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
