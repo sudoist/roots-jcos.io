@@ -4,7 +4,7 @@ Description: Personal site Child Theme for the Beans Theme.
 Author: John Cosio
 Author URI: https://jcos.io
 Template: tm-beans
-Version: 3.6.1
+Version: 3.7.0
 Text Domain: tm-beans
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -269,6 +269,15 @@ ul.uk-subnav.home-icons {
 
 .tm-article-image {
     text-align: center;
+}
+
+/* gigs page */
+i.gig-logo:before {
+    content: "\e901";
+    color: #fff;
+    font-family: Icomoon;
+    font-size: -webkit-xxx-large;
+    font-style: normal;
 }
 
 /* inline spoiler */
