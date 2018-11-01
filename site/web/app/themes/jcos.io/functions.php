@@ -211,7 +211,7 @@ function crunchify_social_sharing_buttons( $content ) {
 // Add Google Adsense code
 add_action('wp_head', 'add_googleAdsense');
 function add_googleAdsense() { 
-    if ( is_singular() && !is_home() && !is_front_page() ) { ?>
+    if ( is_singular() && !is_home() && !is_front_page() && !is_page() ) { ?>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({

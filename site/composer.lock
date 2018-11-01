@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0291ec5eb73b06fcf32970c3bf858b92",
+    "content-hash": "64afcdc3aed657b1eafd073d3176c574",
     "packages": [
         {
             "name": "composer/installers",
@@ -426,15 +426,15 @@
         },
         {
             "name": "wpackagist-plugin/autodescription",
-            "version": "dev-trunk",
+            "version": "3.1.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/autodescription/",
-                "reference": "trunk"
+                "reference": "tags/3.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/autodescription.zip?timestamp=1525625897",
+                "url": "https://downloads.wordpress.org/plugin/autodescription.3.1.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -442,8 +442,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/autodescription/",
-            "time": "2018-05-06T16:58:17+00:00"
+            "homepage": "https://wordpress.org/plugins/autodescription/"
         },
         {
             "name": "wpackagist-plugin/inline-spoilers",
@@ -546,8 +545,7 @@
     "stability-flags": {
         "wpackagist-plugin/akismet": 20,
         "wpackagist-plugin/inline-spoilers": 20,
-        "wpackagist-plugin/wordfence": 20,
-        "wpackagist-plugin/autodescription": 20
+        "wpackagist-plugin/wordfence": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
