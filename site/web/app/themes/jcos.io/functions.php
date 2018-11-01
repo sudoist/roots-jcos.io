@@ -210,15 +210,18 @@ function crunchify_social_sharing_buttons( $content ) {
 
 // Add Google Adsense code
 add_action('wp_head', 'add_googleAdsense');
-function add_googleAdsense() { ?>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-6055949871460102",
-            enable_page_level_ads: true
-        });
-    </script>
-<?php }
+function add_googleAdsense() { 
+    if ( is_singular() && !is_home() && !is_front_page() ) { ?>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-6055949871460102",
+                enable_page_level_ads: true
+            });
+        </script>
+<?php 
+    }
+}
 
 // Add Google Analytics code
 add_action('wp_footer', 'add_googleAnalytics');
